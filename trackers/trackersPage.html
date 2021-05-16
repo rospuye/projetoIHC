@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <title>Trackers</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="../logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
+            <a class="navbar-brand" href="#">Unwind</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Track Your Mood</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Chatrooms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">General</a>
+                            <a class="dropdown-item" href="#">Medical</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Wellness Check</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 style="text-align: center; margin-top: 2%;  font-family: 'Raleway',sans-serif; font-size: 45px; font-weight: 800; line-height: 72px;">TRACK YOUR MOOD</h1>
+        <h5 style="text-align: center;">Complete both or either questionnaire to check your results.</h5>
+
+        <nav class="row" style="margin: 1%;">
+            <nav style="margin: 2%; width: 45%; background-color:lavenderblush;">
+                <nav style="margin: 2%;">
+                    <h3 style="text-align: center;">Mood Tracker</h3>
+                    <h6 style="margin-bottom: 3%; text-align: center;">Answer all the questions below.</h6>
+                    <form>
+                        <div style="border-style: dotted; margin-bottom: 2%;">
+                            <div class="form-group">
+                                <h6 style="margin-left: 2%;">Feeling nervous, anxious or on edge.</h6>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            not at all
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            several days
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault3">
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                            more than half the days
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault4">
+                                        <label class="form-check-label" for="flexRadioDefault4">
+                                            nearly every day
+                                        </label>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="form-group">
+                                <h6 style="margin-left: 2%;">Not being able to stop or control worrying.</h6>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5">
+                                        <label class="form-check-label" for="flexRadioDefault5">
+                                            not at all
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault6">
+                                        <label class="form-check-label" for="flexRadioDefault6">
+                                            several days
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault7">
+                                        <label class="form-check-label" for="flexRadioDefault7">
+                                            more than half the days
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault8">
+                                        <label class="form-check-label" for="flexRadioDefault8">
+                                            nearly every day
+                                        </label>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="form-group">
+                                <h6 style="margin-left: 2%;">Being so restless that it is hard to sit still.</h6>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault9">
+                                        <label class="form-check-label" for="flexRadioDefault9">
+                                            not at all
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault10">
+                                        <label class="form-check-label" for="flexRadioDefault10">
+                                            several days
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault11">
+                                        <label class="form-check-label" for="flexRadioDefault11">
+                                            more than half the days
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault12">
+                                        <label class="form-check-label" for="flexRadioDefault12">
+                                            nearly every day
+                                        </label>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="form-group">
+                                <h6 style="margin-left: 2%;">Little interest or pleasure in doing things.</h6>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault13">
+                                        <label class="form-check-label" for="flexRadioDefault13">
+                                            not at all
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault14">
+                                        <label class="form-check-label" for="flexRadioDefault14">
+                                            several days
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault15">
+                                        <label class="form-check-label" for="flexRadioDefault15">
+                                            more than half the days
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault16">
+                                        <label class="form-check-label" for="flexRadioDefault16">
+                                            nearly every day
+                                        </label>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="form-group">
+                                <h6 style="margin-left: 2%;">Trouble falling or staying asleep, or sleeping too much.</h6>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault17">
+                                        <label class="form-check-label" for="flexRadioDefault17">
+                                            not at all
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault18">
+                                        <label class="form-check-label" for="flexRadioDefault18">
+                                            several days
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault19">
+                                        <label class="form-check-label" for="flexRadioDefault19">
+                                            more than half the days
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault20">
+                                        <label class="form-check-label" for="flexRadioDefault20">
+                                            nearly every day
+                                        </label>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="form-group">
+                                <h6 style="margin-left: 2%;">Feeling bad about yourself - or that you are a failure or have let yourself or your family down.</h6>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault21">
+                                        <label class="form-check-label" for="flexRadioDefault21">
+                                            not at all
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault22">
+                                        <label class="form-check-label" for="flexRadioDefault22">
+                                            several days
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault23">
+                                        <label class="form-check-label" for="flexRadioDefault23">
+                                            more than half the days
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault24">
+                                        <label class="form-check-label" for="flexRadioDefault24">
+                                            nearly every day
+                                        </label>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="form-group">
+                                <h6 style="margin-left: 2%;">Trouble concentrating on things, such as reading the newspaper or watching television.</h6>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault25">
+                                        <label class="form-check-label" for="flexRadioDefault25">
+                                            not at all
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault26">
+                                        <label class="form-check-label" for="flexRadioDefault26">
+                                            several days
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault27">
+                                        <label class="form-check-label" for="flexRadioDefault27">
+                                            more than half the days
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault28">
+                                        <label class="form-check-label" for="flexRadioDefault28">
+                                            nearly every day
+                                        </label>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <nav class="row justify-content-center">
+                            <button type="reset" class="btn btn-dark" style="margin-right: 1%;">Clean</button>
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal4">Submit</button>
+                        </nav>
+
+                    </form>
+
+                </nav>
+            </nav>
+            <nav style="margin: 2%; width: 45%; background-color:lavender">
+                <nav style="margin: 2%;">
+                    <h3 style="text-align: center;">Habit Tracker</h3>
+                    <h6 style="text-align: center; margin-bottom: 2%;">Mark the ones you've done today.</h6>
+                    <form>
+
+                        <div class="row">
+                            <div class="form-group col" style="background-color:lavender; margin: 2%; margin-right: 1%; padding-bottom: 3%; border-style: dotted;">
+                                <h6 style="margin-top: 3%;">Healthy habits</h6>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault1">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Meditating</label>
+                                    </div>
+                                </nav>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Reading</label>
+                                    </div>
+                                </nav>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault3">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Working out</label>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="form-group col" style="background-color:lavender; margin: 2%; margin-left: 1%; padding-bottom: 3%; border-style: dotted;">
+                                <h6 style="margin-top: 3%;">Unhealthy habits</h6>
+                                <nav class="row" style="margin-left: 2%; width: 95%;">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault4">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Smoking</label>
+                                    </div>
+                                </nav>
+                                <nav class="row" style="margin-left: 2%; width: 95%;">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault5">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Biting your nails</label>
+                                    </div>
+                                </nav>
+                                <nav class="row" style="margin-left: 2%; width: 95%;">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault6">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Looking at a screen before bed</label>
+                                    </div>
+                                </nav>
+                                <nav class="row" style="margin-left: 2%; width: 95%;">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault7">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Slouching</label>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <nav class="row justify-content-center" style="margin-bottom: 2%;">
+                            <button type="button" class="btn btn-success" style="margin-right: 1%;" data-toggle="modal" data-target="#exampleModal1">Add Habit</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal2">Remove Habit</button>
+                        </nav>
+
+                        <nav class="row justify-content-center">
+                            <button type="reset" class="btn btn-dark" style="margin-right: 1%;">Clean</button>
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal3">Submit</button>
+                        </nav>
+
+                        <!-- ADD HABIT Modal -->
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel1">Add habit</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">What's the new habit?</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault29">
+                                                <label class="form-check-label" for="flexRadioDefault27">
+                                                    healthy habit
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault30">
+                                                <label class="form-check-label" for="flexRadioDefault28">
+                                                    unhealthy habit
+                                                </label>
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <button type="submit" class="btn btn-dark">Add</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- REMOVE HABIT Modal -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel2">Remove habit</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>[LIST OF CURRENT HABITS]</p>
+                                        <p>should have a checklist of all of them (can remove more than one at once)</p>
+                                        <div class="row justify-content-center">
+                                            <button type="submit" class="btn btn-dark">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT HABITS Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel3">Are you sure?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body row justify-content-center">
+                                        <button type="submit" class="btn btn-dark" style="margin: 1%;">Yes</button>
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal" style="margin: 1%;">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT MOOD Modal -->
+                        <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel4">Are you sure?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body row justify-content-center">
+                                        <button type="submit" class="btn btn-dark" style="margin: 1%;">Yes</button>
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal" style="margin: 1%;">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </nav>
+            </nav>
+        </nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
