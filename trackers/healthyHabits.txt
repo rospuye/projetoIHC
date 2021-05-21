@@ -1,0 +1,3 @@
+Meditating	7	31	9	21	27	3	56
+Reading	24	26	19	7	41	0	41
+Working out	13	5	13	9	55	0	55
