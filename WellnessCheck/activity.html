@@ -2,14 +2,15 @@
 <html>
     <head>
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-        <title></title>
+        <title>Activity</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     </head>
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
+            <img src="../logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
             <a class="navbar-brand" href="#">Unwind</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,29 +31,50 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Wellness Check</a>
+                        <a class="nav-link" href="wellnessCheck.html">Wellness Check</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <div class="container" style="text-align: center; margin-top: 2%; margin-bottom: 2%;">
-            <h1 style="padding-bottom: 2%;">Activity 3</h1>
+            <h1 style="padding-bottom: 2%;">Activity 3</h1>    
+            <br><br><br>
+          
+            <input type="button" value="CLICK ON ME" onclick="play1()" style="background-color: #fd6a5b; border-radius: 50%; padding: 32px 16px; font-size: 20px;">
+            <audio id="audio1" src="zapsplat_cartoon_spring_twang_002_67240.mp3"></audio>
+            <br><br><br>
+
+            <input type="button" value="CLICK ON ME" onclick="play2()" style="background-color: #f5f964; border-radius: 50%; padding: 32px 16px; font-size: 20px;">
+            <audio id="audio2" src="sound_ex_machina_Buttons+-+Metallic+Rotating+Button.mp3"></audio>
+            <br><br><br>
+
+            <input type="button" value="CLICK ON ME" onclick="play3()" style="background-color: #b286f9; border-radius: 50%; padding: 32px 16px; font-size: 20px;">
+            <audio id="audio3" src="multimedia_button_click_012.mp3"></audio>
         </div>
-
-        <p class="aligncenter">
-            <img src="activity.jpg" alt="centered image"  width="550" height="650"/>
-        </p>
-
-        <style>
-            .aligncenter {              
-                text-align: center;                
-            }
-        </style>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+        <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
+        <script>
+            function play1() {
+              var audio1 = document.getElementById("audio1");
+              audio1.play();
+            }
+
+            function play2() {
+              var audio2 = document.getElementById("audio2");
+              audio2.play();
+            }
+
+            function play3() {
+              var audio3 = document.getElementById("audio3");
+              audio3.play();
+            }
+
+        </script>
 
     </body>
 </html>
