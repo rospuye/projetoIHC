@@ -2,14 +2,14 @@
 <html>
     <head>
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-        <title></title>
+        <title>Wellness Check</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
+            <img src="../logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
             <a class="navbar-brand" href="#">Unwind</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Wellness Check</a>
+                        <a class="nav-link" href="wellnessCheck.html">Wellness Check</a>
                     </li>
                 </ul>
             </div>
@@ -50,101 +50,123 @@
                         <div style="border-style: solid; margin-bottom: 2%;">
                             <br>
                             <div class="form-group">
-                                <h5 style="margin-left: 2%;">Some question (choose one option):</h5>
+                                <h5 style="margin-left: 2%;">What do you feel? (choose one or more options):</h5>
                                 <nav class="row" style="margin-left: 2%;">
                                     <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
+                                        <input class="form-check-input" type="checkbox" id="q1a1">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">
+                                            <h5>Depression</h5>
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="checkbox" id="q1a2">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">
+                                            <h5>Stress</h5>
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="checkbox" id="q1a3">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">
+                                            <h5>Anxiety</h5>
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="checkbox" id="q1a4">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">
+                                            <h5>Anger</h5>
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="checkbox" id="q1a5">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">
+                                            <h5>Low self esteem</h5>
+                                        </label>
+                                    </div>
+                                </nav>
+                            </div>
+                            <br><br>
+                            <div class="form-group">
+                                <h5 style="margin-left: 2%;">How long do you have that problem(s)? (choose one option):</h5>
+                                <nav class="row" style="margin-left: 2%;">
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a1">
                                         <label class="form-check-label" for="flexRadioDefault1">
-                                            Op1
+                                            <h5>1/2 days</h5>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a2">
                                         <label class="form-check-label" for="flexRadioDefault2">
-                                            Op2
+                                            <h5>1 week</h5>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a3">
                                         <label class="form-check-label" for="flexRadioDefault3">
-                                            Op3
+                                            <h5>2/3 weeks</h5>
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault4">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a4">
                                         <label class="form-check-label" for="flexRadioDefault4">
-                                            Op4
+                                            <h5>1 month</h5>
                                         </label>
                                     </div>
                                 </nav>
                             </div>
+                            <br><br>
 
                             <div class="form-group">
-                                <h5 style="margin-left: 2%;">Some question:</h5>
+                                <h5 style="margin-left: 2%;">Do you prefer a short or long activity?</h5>
                                 <nav class="row" style="margin-left: 2%;">
                                     <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="q3a1">
                                         <label class="form-check-label" for="flexRadioDefault5">
-                                            True
+                                            <h5>Short</h5>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault6">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="q3a2">
                                         <label class="form-check-label" for="flexRadioDefault6">
-                                            False
-                                        </label>
-                                    </div>
-                                </nav>
-                            </div>
-
-                            <div class="form-group">
-                                <h5 style="margin-left: 2%;">Some question (choose one or more options):</h5>
-                                <nav class="row" style="margin-left: 2%;">
-                                    <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault1">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Op1
-                                        </label>
-                                    </div>
-                                    <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Op2
-                                        </label>
-                                    </div>
-                                    <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault3">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Op3
-                                        </label>
-                                    </div>
-                                    <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault4">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Op4
-                                        </label>
-                                    </div>
-                                    <div class="form-check" style="margin-right: 2%;">
-                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault5">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Op5
+                                            <h5>Long</h5>
                                         </label>
                                     </div>
                                 </nav>
                             </div>
                             <br>
-                            <br>
-                            
-                        <nav class="row justify-content-center">
-                            <button type="reset" class="btn btn-dark" style="margin-right: 1%;">Clean</button>
-                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal4">Submit</button>
-                        </nav>
+   
+                            <nav class="row justify-content-center">
+                                <button type="reset" class="btn btn-dark" style="margin-right: 1%;">Clean</button>
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal4">Submit</button>
+                            </nav>
                         <br>
+
+                        <!-- SUBMIT wellness check Modal -->
+                        <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel4">Are you sure?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body row justify-content-center">
+                                        <button onclick="validateWellnessCheck()" type="submit" class="btn btn-dark" style="margin: 1%;">Yes</button>
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal" style="margin: 1%;">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </nav>
+            </nav>
+        </nav>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="wellnessCheck.js"></script>
+        
     </body>
 </html>
