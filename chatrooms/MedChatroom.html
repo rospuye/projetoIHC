@@ -1,240 +1,309 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
   <title></title>
   <meta charset="utf-8">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <style>
+    .box1 {
+      width: 300px;
+      margin: 10px auto;
+      background: #bfbfbf;
+      padding: 20px;
+      text-align: left;
+      font-weight: 900;
+      color: #fff;
+      font-family: arial;
+      position:relative;
+    }
+    .box2 {
+      width: 300px;
+      margin: 10px auto;
+      background: #00bfb6;
+      padding: 20px;
+      text-align: left;
+      font-weight: 900;
+      color: #fff;
+      font-family: arial;
+      position:relative;
+    }
+    .sb1:before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border-right: 10px solid #bfbfbf;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid #bfbfbf;
+      border-top: 10px solid transparent;
+      left: -20px;
+      bottom: 6px;
+    }
+    .sb2:before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border-left: 10px solid #00bfb6;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #00bfb6;
+      border-bottom: 10px solid transparent;
+      right: -20px;
+      top: 6px;
+    }
+  </style>
 
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <img src="logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
-  <a class="navbar-brand" href="#">Unwind</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Trace Your Mood</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Chatrooms
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">General</a>
-          <a class="dropdown-item" href="#">Medical</a>
+<body style="background-image: url('background2.jpg');">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="../home page/homePage.html">
+      <img src="../logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
+    </a>
+    <a class="navbar-brand" href="../home page/homePage.html">Unwind</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../trackers/trackersPage.html">Track Your Mood</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Chatrooms
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../chatrooms/GenChatroom.html">General</a>
+                    <a class="dropdown-item" href="MedChatroom.html">Medical</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../WellnessCheck/wellnessCheck.html">Wellness Check</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- ... -->
+  <h1 style="text-align: center; margin-top: 2%;  font-family: 'Raleway',sans-serif; font-size: 40px; font-weight: 800; line-height: 72px; color: white;">MEDICAL CHATROOM</h1>
+  <h5 style="text-align: center; margin-top: -1%; color: white;">Talk to medical professionals about what you're feeling.</h5>
+
+  <div class="row d-flex justify-content-center" style="height:550px; margin-top: 25px;margin-bottom: 25px;">
+    <div class="col-2 bg-light p-3 border" style="margin-right: 10px;margin-left: 25px;">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Psychologists
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id="Med1" target="Joaquim Silva" onclick="nameHandler1()">Joaquim Silva</a>
+          <a class="dropdown-item" id="Med2" target="Pedro Cunha" onclick="nameHandler2()">Pedro Cunha</a>
+          <a class="dropdown-item" id="Med3" target="António Silva" onclick="nameHandler3()">António Silva</a>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Wellness Check</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div class="row" style="height:550px; margin-top: 25px;margin-bottom: 25px;">
-  <div class="col-2 bg-light p-3 border" style="margin-right: 10px;margin-left: 25px;" >
-    <div class="dropdown" >
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Psychologists
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-        <a class="dropdown-item" id="Med1" target="Joaquim Silva" onclick="nameHandler1()">Joaquim Silva</a>
-        <a class="dropdown-item" id="Med2" target="Pedro Cunha" onclick="nameHandler2()">Pedro Cunha</a>
-        <a class="dropdown-item" id="Med3" target="António Silva" onclick="nameHandler3()">António Silva</a>
       </div>
-    </div>
 
-    <br>
+      <br>
 
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Psychiatrist
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" id="Med4" target="Roberto Costa" onclick="nameHandler4()">Roberto Costa</a>
-        <a class="dropdown-item" id="Med5" target="Daniela Rodrigues" onclick="nameHandler5()">Daniela Rodrigues</a>
-        <a class="dropdown-item" id="Med6" target="José Santos" onclick="nameHandler6()">José Santos</a>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Psychiatrist
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id="Med4" target="Roberto Costa" onclick="nameHandler4()">Roberto Costa</a>
+          <a class="dropdown-item" id="Med5" target="Daniela Rodrigues" onclick="nameHandler5()">Daniela Rodrigues</a>
+          <a class="dropdown-item" id="Med6" target="José Santos" onclick="nameHandler6()">José Santos</a>
+        </div>
       </div>
-    </div>
 
-    <br>
+      <br>
 
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Mental Health Counselor
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" id="Med7" target="Luís Gustavo" onclick="nameHandler7()">Luís Gustavo</a>
-        <a class="dropdown-item" id="Med8" target="António Brasil"  onclick="nameHandler8()">António Brasil</a>
-        <a class="dropdown-item" id="Med9" target="Pedro Coelho" onclick="nameHandler9()">Pedro Coelho</a>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Mental Health Counselor
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id="Med7" target="Luís Gustavo" onclick="nameHandler7()">Luís Gustavo</a>
+          <a class="dropdown-item" id="Med8" target="António Brasil" onclick="nameHandler8()">António Brasil</a>
+          <a class="dropdown-item" id="Med9" target="Pedro Coelho" onclick="nameHandler9()">Pedro Coelho</a>
+        </div>
       </div>
-    </div>
 
-    <br>
+      <br>
 
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Addiction Counselor
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" id="Med10" target="Filipa Ferreira" onclick="nameHandler10()">Filipa Ferreira</a>
-        <a class="dropdown-item" id="Med11" target="Gonçalo Santos" onclick="nameHandler11()">Gonçalo Santos</a>
-        <a class="dropdown-item" id="Med12" target="Ana Dias" onclick="nameHandler12()">Ana Dias</a>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Addiction Counselor
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id="Med10" target="Filipa Ferreira" onclick="nameHandler10()">Filipa Ferreira</a>
+          <a class="dropdown-item" id="Med11" target="Gonçalo Santos" onclick="nameHandler11()">Gonçalo Santos</a>
+          <a class="dropdown-item" id="Med12" target="Ana Dias" onclick="nameHandler12()">Ana Dias</a>
+        </div>
       </div>
-    </div>
 
-  </div>
-  <div class="col-sm-8 bg-light p-3 border">
-    <div class="row d-flex flex-row-reverse">
-      <div class="col-6 bd-highlight" id="MedName">
-        Welcome. Here at Unwind we strive to help you. Select the name of the health professional you wish to speak to.
-      </div>
     </div>
-    <!--<div class="row  d-flex flex-row-reverse" style="margin-right: 2px;">
+    <div class="col-sm-8 bg-light p-3 border">
+      <div class="row">
+        <div class="box1 sb1" style="margin-left: 35px;" id="MedName">
+          Welcome. Here at Unwind we strive to help you. Select the name of the health professional you wish to speak
+          to.
+        </div>
+      </div>
+      <!--<div class="row  d-flex flex-row-reverse" style="margin-right: 2px;">
       <p class="hidden" id="startParagraph" > Welcome. Here at Unwind we strive to help you.</p>
     </div>-->
-    <br>
-    <div class="row" id="userResponse" style="margin-left: 2px; ">
-    </div>
+      <br>
+      <div class="row" id="userResponse" style="margin-left: 2px; ">
+      </div>
 
-    <div class="row" style="position: absolute; bottom: 0; width: 100%; height: 90px;background: rgba(76, 175, 80, 0);">
-      <textarea id="userInput" placeholder="Type message.." name="msg" required style="width: 90%"></textarea>
+      <div class="row d-flex justify-content-center"
+        style="position: absolute; bottom: 0; width: 100%; height: 90px;background: rgba(76, 175, 80, 0); padding: 1%;">
+        <textarea id="userInput" placeholder="Type message.." name="msg" required style="width: 85%"></textarea>
 
-      <button id="userSubmission" onclick="submissionHandle() ;" type="submit" class="btn btn-success" style="width: 10%; font-size: large;" >Send</button>
+        <button id="userSubmission" onclick="submissionHandle() ;" type="submit" class="btn btn-success"
+          style="width: 10%; font-size: large; height: 60%; margin: 1%;">Send</button>
+
+      </div>
 
     </div>
   </div>
-</div>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
 
-<script>
+  <script>
 
-  function nameHandler1() {
-    var x = document.getElementById("Med1").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+    function nameHandler1() {
+      var x = document.getElementById("Med1").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler2() {
-    var x = document.getElementById("Med2").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+    }
+    function nameHandler2() {
+      var x = document.getElementById("Med2").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler3() {
-    var x = document.getElementById("Med3").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+    }
+    function nameHandler3() {
+      var x = document.getElementById("Med3").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler4() {
-    var x = document.getElementById("Med4").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+    }
+    function nameHandler4() {
+      var x = document.getElementById("Med4").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler5() {
-    var x = document.getElementById("Med5").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
+    }
+    function nameHandler5() {
+      var x = document.getElementById("Med5").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
 
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler6() {
-    var x = document.getElementById("Med6").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+    }
+    function nameHandler6() {
+      var x = document.getElementById("Med6").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler7() {
-    var x = document.getElementById("Med7").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
+    }
+    function nameHandler7() {
+      var x = document.getElementById("Med7").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
 
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler8() {
-    var x = document.getElementById("Med8").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
+    }
+    function nameHandler8() {
+      var x = document.getElementById("Med8").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
 
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler9() {
-    var x = document.getElementById("Med9").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
+    }
+    function nameHandler9() {
+      var x = document.getElementById("Med9").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
 
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler10() {
-    var x = document.getElementById("Med10").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
+    }
+    function nameHandler10() {
+      var x = document.getElementById("Med10").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
 
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler11() {
-    var x = document.getElementById("Med11").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
+    }
+    function nameHandler11() {
+      var x = document.getElementById("Med11").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
 
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
-  function nameHandler12() {
-    var x = document.getElementById("Med12").getAttribute("target");
-    //document.getElementById("demo").innerHTML = x;
-    var div = document.getElementById("startParagraph");
+    }
+    function nameHandler12() {
+      var x = document.getElementById("Med12").getAttribute("target");
+      //document.getElementById("demo").innerHTML = x;
+      var div = document.getElementById("startParagraph");
 
-    document.getElementById("MedName").value = "";
-    document.getElementById("MedName").innerText= x ;
+      document.getElementById("MedName").value = "";
+      document.getElementById("MedName").innerText = x;
 
-  }
+    }
 
-  function submissionHandle()
-  {
-    var input = document.getElementById("userInput").value;
-    document.getElementById("userInput").value = "";
-    //alert(input);
-    var para = document.createElement("P");
-    para.innerText = input + "\n" ;
-    document.getElementById("userResponse").appendChild(para);
-  }
+    function submissionHandle() {
+      var input = document.getElementById("userInput").value;
+      var responseDiv = document.createElement("div");
+      responseDiv.className = "row box2 sb2";
+      responseDiv.style.marginRight = "20px";
+      responseDiv.innerText = input;
+      document.getElementById("userResponse").appendChild(responseDiv);
+      document.getElementById("userInput").value = "";
+    }
 
-</script>
+  </script>
 </body>
+
 </html>

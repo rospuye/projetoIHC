@@ -6,11 +6,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body style="background-image: url('background.jpg');">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="../logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
-            <a class="navbar-brand" href="#">Unwind</a>
+            <a href="../home page/homePage.html">
+                <img src="../logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
+            </a>
+            <a class="navbar-brand" href="../home page/homePage.html">Unwind</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,15 +20,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Track Your Mood</a>
+                        <a class="nav-link" href="../trackers/trackersPage.html">Track Your Mood</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Chatrooms
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">General</a>
-                            <a class="dropdown-item" href="#">Medical</a>
+                            <a class="dropdown-item" href="../chatrooms/GenChatroom.html">General</a>
+                            <a class="dropdown-item" href="../chatrooms/MedChatroom.html">Medical</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -37,98 +39,109 @@
         </nav>
 
         <div class="container" style="text-align: center; margin-top: 2%; margin-bottom: 2%;">
-            <h1 style="padding-bottom: 2%;">Wellness Check</h1>
+            <h1 style="text-align: center; margin-top: 2%;  font-family: 'Raleway',sans-serif; font-size: 40px; font-weight: 800; line-height: 72px;">WELLNESS CHECK</h1>
+            <h5 style="text-align: center; margin-top: -1%;">Complete the questionnaire below to get your activity.</h5>
+
+            <!-- <h1 style="padding-bottom: 2%;">Wellness Check</h1>
             <div style="padding-bottom: 5%;">
                 <h5 style="position: absolute; left: 30%; width: 40%;">Complete the questionnaire below to get your activity</h5>
-            </div>
+            </div> -->
         </div>
 
-        <nav class="row" style="margin: 1%;">
-            <nav style="margin: 1%; width: 99%; background-color:#d3f9ff;">
+        <nav class="row d-flex justify-content-center" style="margin: 1%;">
+            <nav style="margin: 1%; width: 70%; background-color:#ffccff;">
                 <nav style="margin: 2%;">
                     <form>
                         <div style="border-style: solid; margin-bottom: 2%;">
                             <br>
                             <div class="form-group">
-                                <h5 style="margin-left: 2%;">What do you feel? (choose one or more options):</h5>
+                                <h5 style="margin-left: 2%;">What do you feel?</h5>
+                                <h6 style="margin-left: 2%; margin-top: -1%;">Choose one or more options.</h6>
                                 <nav class="row" style="margin-left: 2%;">
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="checkbox" id="q1a1">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            <h5>Depression</h5>
+                                            <h6>Depression</h6>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="checkbox" id="q1a2">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            <h5>Stress</h5>
+                                            <h6>Stress</h6>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="checkbox" id="q1a3">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            <h5>Anxiety</h5>
+                                            <h6>Anxiety</h6>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="checkbox" id="q1a4">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            <h5>Anger</h5>
+                                            <h6>Anger</h6>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="checkbox" id="q1a5">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            <h5>Low self esteem</h5>
+                                            <h6>Low self esteem</h6>
                                         </label>
                                     </div>
                                 </nav>
                             </div>
                             <br><br>
-                            <div class="form-group">
-                                <h5 style="margin-left: 2%;">How long do you have that problem(s)? (choose one option):</h5>
+                            <div class="form-group" style="margin-top: -5%;">
+                                <h5 style="margin-left: 2%;">How long have you felt this way?</h5>
+                                <h6 style="margin-left: 2%; margin-top: -1%;">Choose one option.</h6>
                                 <nav class="row" style="margin-left: 2%;">
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a1">
                                         <label class="form-check-label" for="flexRadioDefault1">
-                                            <h5>1/2 days</h5>
+                                            <h6>1/2 days</h6>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a2">
                                         <label class="form-check-label" for="flexRadioDefault2">
-                                            <h5>1 week</h5>
+                                            <h6>1 week</h6>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a3">
                                         <label class="form-check-label" for="flexRadioDefault3">
-                                            <h5>2/3 weeks</h5>
+                                            <h6>2/3 weeks</h6>
+                                        </label>
+                                    </div>
+                                    <div class="form-check" style="margin-right: 2%;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a4">
+                                        <label class="form-check-label" for="flexRadioDefault4">
+                                            <h6>1 month</h6>
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault1" id="q2a4">
                                         <label class="form-check-label" for="flexRadioDefault4">
-                                            <h5>1 month</h5>
+                                            <h6>Longer</h6>
                                         </label>
                                     </div>
                                 </nav>
                             </div>
                             <br><br>
 
-                            <div class="form-group">
-                                <h5 style="margin-left: 2%;">Do you prefer a short or long activity?</h5>
+                            <div class="form-group" style="margin-top: -5%;">
+                                <h5 style="margin-left: 2%;">Do you prefer a short or a long activity?</h5>
                                 <nav class="row" style="margin-left: 2%;">
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault2" id="q3a1">
                                         <label class="form-check-label" for="flexRadioDefault5">
-                                            <h5>Short</h5>
+                                            <h6>Short</h6>
                                         </label>
                                     </div>
                                     <div class="form-check" style="margin-right: 2%;">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault2" id="q3a2">
                                         <label class="form-check-label" for="flexRadioDefault6">
-                                            <h5>Long</h5>
+                                            <h6>Long</h6>
                                         </label>
                                     </div>
                                 </nav>

@@ -8,11 +8,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </head>
-    <body onload="loadHabits()">
+    <body onload="loadHabits()" style="background-image: url('background.jpg');">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="../logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
-            <a class="navbar-brand" href="#">Unwind</a>
+            <a href="../home page/homePage.html">
+                <img src="../logo.png" alt="Unwind Logo" width="50" style="margin-left: 20px; margin-right: 20px;">
+            </a>
+            <a class="navbar-brand" href="../home page/homePage.html">Unwind</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -20,19 +22,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Track Your Mood</a>
+                        <a class="nav-link" href="trackersPage.html">Track Your Mood</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Chatrooms
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">General</a>
-                            <a class="dropdown-item" href="#">Medical</a>
+                            <a class="dropdown-item" href="../chatrooms/GenChatroom.html">General</a>
+                            <a class="dropdown-item" href="../chatrooms/MedChatroom.html">Medical</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Wellness Check</a>
+                        <a class="nav-link" href="../WellnessCheck/wellnessCheck.html">Wellness Check</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +44,7 @@
         <h5 style="text-align: center;">Complete both or either questionnaire to check your results.</h5>
 
         <nav class="row" style="margin: 1%;">
-            <nav style="margin: 2%; width: 45%; background-color:lavenderblush;">
+            <nav style="margin: 2%; width: 45%; background-color:#ffe6ff;">
                 <nav style="margin: 2%;">
                     <h3 style="text-align: center;">Mood Tracker</h3>
                     <h6 style="margin-bottom: 3%; text-align: center;">Answer all the questions below.</h6>
@@ -268,7 +270,7 @@
 
                 </nav>
             </nav>
-            <nav style="margin: 2%; width: 45%; background-color:lavender">
+            <nav style="margin: 2%; width: 45%; background-color:#cce5ff">
                 <nav style="margin: 2%;">
                     <h3 style="text-align: center;">Habit Tracker</h3>
                     <h6 style="text-align: center; margin-bottom: 2%;">Mark the ones you've done today.</h6>
@@ -418,7 +420,7 @@
         </nav>
 
         <nav class="row" style="margin: 1%;">
-            <nav style="width: 45%; background-color:lavenderblush; margin-left: 2%; margin-right: 2%; padding: 1%;" id="moodGraphs">
+            <nav style="width: 45%; background-color:#ffe6ff; margin-left: 2%; margin-right: 2%; padding: 1%;" id="moodGraphs">
                 <!-- graphs -->
                 <div id="noMoodGraphs" style="display: block; text-align: center;">
                     <h4>Your results will appear here!</h4>
@@ -427,7 +429,7 @@
                     <div id="overallMoodGraph" style="height: 400px;"></div>
                 </div>
             </nav>
-            <nav style="width: 45%; background-color:lavender; margin-left: 2%; margin-right: 2%; padding: 1%;" id="habitGraphs">
+            <nav style="width: 45%; background-color:#cce5ff; margin-left: 2%; margin-right: 2%; padding: 1%;" id="habitGraphs">
                 <!-- graphs -->
                 <div id="noHabitGraphs" style="display: block; text-align: center;">
                     <h4>Your results will appear here!</h4>

@@ -23,7 +23,8 @@ function validateWellnessCheck() {
     
 
     if (boolean1 && boolean2 && boolean3) {
-        processMoodForm();
+        // window.location.replace("activity.html");
+        // doesn't work idk why
     }
     else {
         alert("You didn't complete the whole questionnaire!");
