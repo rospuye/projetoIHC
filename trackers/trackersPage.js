@@ -61,16 +61,13 @@ function validateMoodForm() {
     console.log(boolean7);
 
     if (boolean1 && boolean2 && boolean3 && boolean4 && boolean5 && boolean6 && boolean7) {
-        processMoodForm();
+        $("#exampleModal4").modal('hide');
+        showMoodGraphs();
     }
     else {
         alert("You didn't complete the whole form!");
     }
 
-}
-
-function processMoodForm() {
-    // ...
 }
 
 function loadHabits() {
@@ -124,6 +121,7 @@ function loadHabits() {
         bigDiv.appendChild(medDiv);
         document.getElementById("appendUH").appendChild(bigDiv);
     }
+
 }
 
 function validateAddHabitForm() {
@@ -134,6 +132,7 @@ function validateAddHabitForm() {
         alert("You didn't complete the whole form!");
     }
     else {
+        $("#exampleModal1").modal('hide');
         addHabit(habit, radio1);
     }
 }
@@ -205,6 +204,8 @@ function displayRemoveHabits() {
         document.getElementById("removeAppend2").appendChild(bigDiv);
     }
 
+    $("#exampleModal2").modal('hide'); // not working why???
+
 }
 
 function removeHabits() {
@@ -221,6 +222,143 @@ function removeHabits() {
             document.getElementById("div" + badHabits[i]["name"]).style.display = "none";
         }
     }
+
+}
+
+function showHabitsGraphs() {
+
+    var goodData = [];
+    var counter = 0;
+    for (i=0; i<goodHabits.length; i++) {
+        counter = counter + 10;
+        goodData.push({y: Math.round(Math.random()*100), label: goodHabits[i]["name"]});
+    }
+
+    var goodChart = new CanvasJS.Chart("habitGraph1", {
+        animationEnabled: true,
+        exportEnabled: true,
+        theme: "light1", // "light1", "light2", "dark1", "dark2"
+        title: {
+            text: "Total number of times you've done each good habit",
+            fontSize: 20,
+        },
+        axisX: {
+            labelAngle: -30,
+        },
+        axisY: {
+            includeZero: true,
+            maximum: 110,
+            interval: 20,
+        },
+        data: [{
+            type: "column", //change type to bar, line, area, pie, etc
+            dataPoints: goodData
+        }]
+    });
+    goodChart.render();
+
+    var badData = [];
+    var counter = 0;
+    for (i=0; i<badHabits.length; i++) {
+        counter = counter + 10;
+        badData.push({y: Math.round(Math.random()*100), label: badHabits[i]["name"]});
+    }
+
+    var badChart = new CanvasJS.Chart("habitGraph2", {
+        animationEnabled: true,
+        exportEnabled: true,
+        theme: "light1", // "light1", "light2", "dark1", "dark2"
+        title: {
+            text: "Total number of times you've avoided each bad habit",
+            fontSize: 20,
+        },
+        axisX: {
+            labelAngle: -30,
+        },
+        axisY: {
+            includeZero: true,
+            maximum: 110,
+            interval: 20,
+        },
+        data: [{
+            type: "column", //change type to bar, line, area, pie, etc
+            dataPoints: badData
+        }]
+    });
+    badChart.render();
+
+    document.getElementById("noHabitGraphs").style.display = "none";
+    document.getElementById("yesHabitGraphs").style.display = "block";
+
+    $("#exampleModal3").modal('hide');
+    // document.getElementById("yesHabitGraphs").scrollIntoView();
+
+}
+
+function showMoodGraphs() {
+
+    var overall = new CanvasJS.Chart("overallMoodGraph", {
+        animationEnabled: true,
+        title: {
+            text: "An Overview Of Your Mental Health Lately",
+            fontSize: 20,
+        },
+        axisX: {
+            valueFormatString: "DD MMM,YY"
+        },
+        axisY: {
+            title: "Relative Wellbeing (%)",
+            suffix: " %"
+        },
+        legend: {
+            cursor: "pointer",
+            fontSize: 16,
+            itemclick: toggleDataSeries
+        },
+        toolTip: {
+            shared: true
+        },
+        data: [{
+            name: "Anxiety",
+            type: "spline",
+            showInLegend: true,
+            dataPoints: [
+                { x: new Date(2021, 1, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 2, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 3, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 4, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 5, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 6, 1), y: Math.round((Math.random()*90)+10) },
+            ]
+        },
+        {
+            name: "Depression",
+            type: "spline",
+            showInLegend: true,
+            dataPoints: [
+                { x: new Date(2021, 1, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 2, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 3, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 4, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 5, 1), y: Math.round((Math.random()*90)+10) },
+                { x: new Date(2021, 6, 1), y: Math.round((Math.random()*90)+10) },
+            ]
+        }]
+    });
+    overall.render();
+
+    function toggleDataSeries(e) {
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        }
+        else {
+            e.dataSeries.visible = true;
+        }
+        overall.render();
+    }
+
+    document.getElementById("noMoodGraphs").style.display = "none";
+    document.getElementById("yesMoodGraphs").style.display = "block";
 
 }
 
