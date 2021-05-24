@@ -23,7 +23,7 @@ function validateWellnessCheck() {
     
 
     if (boolean1 && boolean2 && boolean3) {
-        // window.location.replace("activity.html");
+        window.location.replace("activity.html");
         // doesn't work idk why
     }
     else {
