@@ -172,7 +172,7 @@
         <textarea id="userInput" placeholder="Type message.." name="msg" required style="width: 85%"></textarea>
 
         <button id="userSubmission" onclick="submissionHandle() ;" type="submit" class="btn btn-success"
-          style="width: 10%; font-size: large; height: 60%; margin: 1%;">Send</button>
+          style="width: 10%; font-size: large; height: 60%; margin: 1%;" disabled>Send</button>
 
       </div>
 
@@ -196,6 +196,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler2() {
       var x = document.getElementById("Med2").getAttribute("target");
@@ -204,6 +206,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler3() {
       var x = document.getElementById("Med3").getAttribute("target");
@@ -212,6 +216,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler4() {
       var x = document.getElementById("Med4").getAttribute("target");
@@ -220,6 +226,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler5() {
       var x = document.getElementById("Med5").getAttribute("target");
@@ -229,6 +237,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler6() {
       var x = document.getElementById("Med6").getAttribute("target");
@@ -237,6 +247,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler7() {
       var x = document.getElementById("Med7").getAttribute("target");
@@ -246,6 +258,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler8() {
       var x = document.getElementById("Med8").getAttribute("target");
@@ -255,6 +269,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler9() {
       var x = document.getElementById("Med9").getAttribute("target");
@@ -264,6 +280,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler10() {
       var x = document.getElementById("Med10").getAttribute("target");
@@ -273,6 +291,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler11() {
       var x = document.getElementById("Med11").getAttribute("target");
@@ -282,6 +302,8 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
     function nameHandler12() {
       var x = document.getElementById("Med12").getAttribute("target");
@@ -291,10 +313,15 @@
       document.getElementById("MedName").value = "";
       document.getElementById("MedName").innerText = x;
 
+      var button = document.getElementById("userSubmission");
+      button.disabled = false;
     }
 
     function submissionHandle() {
       var input = document.getElementById("userInput").value;
+      if (input=="") {
+        return;
+      }
       var responseDiv = document.createElement("div");
       responseDiv.className = "row box2 sb2";
       responseDiv.style.marginRight = "20px";
