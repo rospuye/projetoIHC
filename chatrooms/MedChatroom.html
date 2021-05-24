@@ -211,6 +211,14 @@
 
       var button = document.getElementById("userSubmission");
       button.disabled = false;
+
+      while (true) {
+        var el = document.getElementById("eraseWhenChange");
+        if (el==null) {
+          break;
+        }
+        el.parentNode.removeChild(el);
+      }
     }
     function nameHandler3() {
       var x = document.getElementById("Med3").getAttribute("target");
@@ -329,6 +337,7 @@
       responseDiv.className = "row box2 sb2";
       responseDiv.style.marginRight = "20px";
       responseDiv.innerText = input;
+      responseDiv.id = "eraseWhenChange";
       document.getElementById("userResponse").appendChild(responseDiv);
       document.getElementById("userInput").value = "";
     }
