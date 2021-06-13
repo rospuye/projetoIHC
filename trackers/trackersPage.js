@@ -287,11 +287,13 @@ function showHabitsGraphs() {
     });
     badChart.render();
 
+    $("#exampleModal3").modal('hide');
+
     document.getElementById("noHabitGraphs").style.display = "none";
     document.getElementById("yesHabitGraphs").style.display = "block";
 
-    $("#exampleModal3").modal('hide');
-    // document.getElementById("yesHabitGraphs").scrollIntoView();
+    
+    document.getElementById("HERE").scrollIntoView();
 
 }
 
@@ -360,77 +362,6 @@ function showMoodGraphs() {
     document.getElementById("noMoodGraphs").style.display = "none";
     document.getElementById("yesMoodGraphs").style.display = "block";
 
+    document.getElementById("HERE").scrollIntoView();
+
 }
-
-
-
-
-
-
-
-// ng-init = "goodHabits = [ {name: 'Meditating', conDays:7, maxDays:31, date:new Date(), thisMonth:9, lastMonth:21, thisYear:27, lastYear:3, total:56 },
-//                             {name: 'Reading', conDays:24, maxDays:26, date:new Date(), thisMonth:19, lastMonth:7, thisYear:41, lastYear:0, total:41 },
-//                             {name: 'Working out', conDays:13, maxDays:5, date:new Date(), thisMonth:13, lastMonth:9, thisYear:55, lastYear:0, total:55 } ];
-//            badHabits = [ {name: 'Smoking', conDays:109, maxDays:109, date:new Date(), thisMonth:9, lastMonth:21, thisYear:27, lastYear:3, total:56 },
-//                             {name: 'Biting your nails', conDays:51, maxDays:77, date:new Date(), thisMonth:9, lastMonth:21, thisYear:27, lastYear:3, total:56 },
-//                             {name: 'Looking at a screen before bed', conDays:2, maxDays:11, date:new Date(), thisMonth:9, lastMonth:21, thisYear:27, lastYear:3, total:56 },
-//                             {name: 'Slouching', conDays:6, maxDays:8, date:new Date(), thisMonth:9, lastMonth:21, thisYear:27, lastYear:3, total:56 } ]"
-
-// ------------ ATTRIBUTES OF EACH HABIT ------------
-
-// conDays = consecutive days
-    // for good habits: number of consecutive days doing that habit
-    // for bad habits: number os consecutive days without doing that habit
-
-// maxDays = maximum number of days
-    // for good habits: maximum number of consecutive days doing that habit (ever)
-    // for bad habits: maximum number os consecutive days without doing that habit (ever)
-
-// date = date of the last update
-    // we're gonna use Date objects
-    // var d = new Date(year,month,day)
-    // parameters are int values
-    // we can compare Dates using the >, >=, <, <= and == operators
-    // new Date() without passing any parameters gives us the current date
-
-// thisMonth
-    // for good habits: number of days the habit was done this month
-    // for bad habits: number of days the habit was avoided this month
-
-// lastMonth
-    // for good habits: number of days the habit was done last month
-    // for bad habits: number of days the habit was avoided last month
-
-// thisYear
-    // for good habits: number of days the habit was done this year
-    // for bad habits: number of days the habit was avoided this year
-
-// lastYear
-    // for good habits: number of days the habit was done last year
-    // for bad habits: number of days the habit was avoided last year
-
-// total
-    // for good habits: total number of days in which the habit was done (ever)
-    // for bad habits: total number of days in which the habit was avoided (ever)
-
-// --------------------------------------------------
-
-// -------------- DATA FOR EACH HABIT ---------------
-
-// OVERVIEW SECTION:
-    // contDays
-    // maxDays
-    // score (percentage): percentage of days in current month that were successful
-        // successful means doing the habit if it's good or avoiding it if it's bad
-        // we could try to have a little load cycle here
-    // month (percentage): how much more successful is this month compared to last month?
-    // year (percentage): how much more successful is this year compared to last year?
-    // total: total number of successful days (ever)
-
-// GRAPHS
-    // History graph:
-        // it's basically an histogram with the number of successful days for each of the last 6 months
-    // Calendar:
-        // a small calendar where all the successful days are marked
-
-// --------------------------------------------------
