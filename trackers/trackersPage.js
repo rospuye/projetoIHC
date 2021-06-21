@@ -292,9 +292,6 @@ function showHabitsGraphs() {
     document.getElementById("noHabitGraphs").style.display = "none";
     document.getElementById("yesHabitGraphs").style.display = "block";
 
-    
-    document.getElementById("HERE").scrollIntoView();
-
 }
 
 function showMoodGraphs() {
@@ -361,7 +358,5 @@ function showMoodGraphs() {
 
     document.getElementById("noMoodGraphs").style.display = "none";
     document.getElementById("yesMoodGraphs").style.display = "block";
-
-    document.getElementById("HERE").scrollIntoView();
 
 }
